@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#e7baff, #c2b6d9);
+}
+
+#drop-area{
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+#img-view{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dashed #bbb5ff;
+    background: #f7f8ff;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#img-view img{
+    width: 100px;
+    margin: 25px 0px;
+}
+
+#img-view p{
+    margin-bottom: 25px;
+}
