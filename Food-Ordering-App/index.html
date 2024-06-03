@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Food Ordering App</title>
+   <link rel="stylesheet" href="style.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+     rel="stylesheet"
+   />
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   />
+ </head>
+ <body>
+   <header>
+     <nav class="navbar">
+       <a href="#" class="logo">
+         <img src="../assets/lastmeal.png" alt="logo" />
+       </a>
+       <div class="nav-items">
+         <div class="greeting-container">
+           <p class="greeting-text">Morning Suman</p>
+           <p class="welcome-text">Welcome Back!</p>
+         </div>
+         <div class="search-box">
+           <span class="search-icon">
+             <i class="fa-solid fa-magnifying-glass"></i>
+           </span>
+           <input
+             type="text"
+             id="search"
+             placeholder="Search"
+           />
+         </div>
+       </div>
+     </nav>
+   </header>
+   <main id="app">
+     <h1>Top restaurants in your area</h1>
+
+
+     <div class="filter-sort-container">
+       <select id="sort">
+           <option value="rating">Sort by Rating</option>
+           <option value="eta">Sort by ETA</option>
+       </select>
+       <select id="filter">
+           <option value="all">All Food Types</option>
+           <option value="American">American</option>
+           <option value="Mexican">Mexican</option>
+           <option value="French">French</option>
+           <option value="Chinese">Chinese</option>
+           <option value="Indian">Indian</option>
+           <option value="Italian">Italian</option>
+       </select>
+     </div>
+     <section id="restaurant-list">
+
+
+     </section>
+   </main>
+   <script src="app.js"></script>
+   <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+     integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   ></script>
+ </body>
+</html>
