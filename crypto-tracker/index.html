@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <nav>
+        <div class="left-nav">
+            <a href="index.html" class="title">Crypto Tracker</a>
+        </div>
+        <div class="right-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="favorites/favorites.html" class="nav-link">Favourites</a>
+            <div class="search-container">
+                <span class="search-icon">
+             <i class="fa-solid fa-magnifying-glass"></i>
+           </span>
+           <input
+             type="text"
+             id="search-box"
+             placeholder="Search"
+           />
+            </div>
+
+        </div>
+    </nav>
+    <main>
+        <table id="crypto-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Price
+                        <i id="sort-price-asc" class="fas fa-arrow-up"></i>
+                        <i id="sort-price-desc" class="fas fa-arrow-down"></i>
+                    </th>
+                    <th>Volume
+                        <i id="sort-volume-asc" class="fas fa-arrow-up"></i>
+                        <i id="sort-volume-desc" class="fas fa-arrow-down"></i>
+                    </th>
+                    <th>Market Cap
+                        <i id="sort-market-asc" class="fas fa-arrow-up sort-icon" title="Sort by market ascending"></i>
+                        <i id="sort-market-desc" class="fas fa-arrow-down sort-icon" title="Sort by market descending"></i>
+                    </th>
+                    <th>Favorite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div id="pagination-controls">
+            <button id="prev-button">Prev</button>
+            <button id="next-button">Next</button>
+        </div>
+        <div class="shimmer-container">
+            <div class="shimmer"></div>
+        </div> <!-- Added shimmer container -->
+    </main>
+   
+    <script src="app.js"></script>
+</body>
+</html>

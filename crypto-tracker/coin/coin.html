@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitcoins Data</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <nav>
+      <div class="left-nav">
+        <a href="../index.html" class="title">Crypto Tracker</a>
+      </div>
+      <div class="right-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../favorites/favorites.html" class="nav-link">Favourites</a>
+        <div class="search-container">
+          <span class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input type="text" id="search-box" placeholder="Search" />
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="shimmer-container" style="display: none">
+        <div class="shimmer"></div>
+      </div>
+      <div id="coin-container" class="container" >
+        <div id="sidebar" class="sidebar">
+          <img id="coin-image" src="" alt="Coin Image" />
+          <h3 id="coin-name" class="heading"></h3>
+          <p id="coin-description" class="description"></p>
+          <div id="market-data" class="market-data">
+            <div class="market-data-item">
+              <span class="heading">Rank:</span>
+              <span id="coin-rank"></span>
+            </div>
+            <div class="market-data-item">
+              <span class="heading">Current Price:</span>
+              <span id="coin-price"></span>
+            </div>
+            <div class="market-data-item">
+              <span class="heading">Market Cap:</span>
+              <span id="coin-market-cap"></span>
+            </div>
+          </div>
+        </div>
+        <div id="chart-section" class="chart-section">
+          <div class="button-container">
+            <button id="24h">24h</button>
+            <button id="30d">30d</button>
+            <button id="3m">3m</button>
+          </div>
+          <canvas id="coinChart"></canvas>
+        </div>
+      </div>
+    </main>
+    <script src="./coin.js"></script>
+  </body>
+</html>

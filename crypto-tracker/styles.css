@@ -1,0 +1,275 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 86px;
+    border-bottom: 1px solid #e6e6e6;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.title{
+    color: gold;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+#search-box{
+    background: #fff;
+    height: 36px;
+    border: none;
+    outline: none;
+}
+
+main{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table{
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+th, td{
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    background-color: #f2f2f2;
+}
+
+tr:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+#pagination-controls{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 95%;
+}
+
+#prev-button, #next-button{
+    padding: 13px;
+    border: none;
+    background: gold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 135px;
+    font-weight: 500;
+}
+
+#prev-button.disabled, #next-button.disabled {
+    background-color: #f4f4f4;
+    color: #000;
+    cursor: not-allowed;
+}
+
+.shimmer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent to show loading state */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none; /* Initially hidden */
+}
+
+.shimmer {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background: conic-gradient(#0000 10%, gold);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+   animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(1turn);
+   }
+}
+
+
+#pagination {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px 0px; /* Ensure some space from the content */
+    
+}
+
+.page-button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.page-button.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+.favorite-icon {
+    cursor: pointer;
+}
+
+.favorite-icon:hover, .favorite {
+    color: gold;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+
+.chart-section {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.button-container button.active {
+    background-color: #eeBC1D;
+    color: #fff;
+}
+
+.heading {
+    font-weight: bold;
+    margin: 20px;
+}
+
+
+.description {
+    width: 100%;
+    padding: 25px;
+    padding-bottom: 15px;
+    padding-top: 0;
+    text-align: justify;
+}
+
+
+.market-data {
+    align-self: flex-start;
+    padding: 25px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+.market-data-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid grey;
+    }
+
+    .chart-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+        padding: 10px;
+    }
+
+    .market-data {
+        padding: 10px;
+    }
+
+    .button-container button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+

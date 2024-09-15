@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Coins</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+   <nav>
+      <div class="left-nav">
+        <a href="../index.html" class="title">Crypto Tracker</a>
+      </div>
+      <div class="right-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="./favorites.html" class="nav-link">Favourites</a>
+        <div class="search-container">
+          <span class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input type="text" id="search-box" placeholder="Search" />
+        </div>
+      </div>
+    </nav>
+  <main>
+    <h1 style="text-align: center;">Favorite Coins</h1>
+  <div class="shimmer-container" style="display: none;">
+    <div class="shimmer"></div>
+  </div>
+  <table id="favorite-table">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Icon</th>
+        <th>Name</th>
+        <th>Price
+          <i id="sort-price-asc" class="fas fa-arrow-up sort-icon" title="Sort by price ascending"></i>
+          <i id="sort-price-desc" class="fas fa-arrow-down sort-icon" title="Sort by price descending"></i>
+        </th>
+        <th>24h Volume
+          <i id="sort-volume-asc" class="fas fa-arrow-up sort-icon" title="Sort by volume ascending"></i>
+          <i id="sort-volume-desc" class="fas fa-arrow-down sort-icon" title="Sort by volume descending"></i>
+        </th>
+        <th>Market Cap
+             <i id="sort-market-asc" class="fas fa-arrow-up sort-icon" title="Sort by master ascending"></i>
+          <i id="sort-market-desc" class="fas fa-arrow-down sort-icon" title="Sort by master descending"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Favorite coin rows will be inserted here by JavaScript -->
+    </tbody>
+  </table>
+  </main>
+  <p id="no-favorites" style="display: none; text-align: center;">"You haven't liked any coins yet. Explore and add your favorites!"</p>
+  <script src="favorites.js"></script>
+  <!-- <script src ="app.js"></script> -->
+</body>
+</html>

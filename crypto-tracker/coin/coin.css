@@ -1,0 +1,184 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+
+.chart-section {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.button-container button.active {
+    background-color: #eeBC1D;
+    color: #fff;
+}
+
+.heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.description {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 25px;
+    padding-bottom: 15px;
+    padding-top: 0;
+    text-align: justify;
+}
+
+
+.market-data {
+    align-self: flex-start;
+    padding: 25px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+.market-data-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    background-color: #333;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    position: relative; /* Ensure relative positioning for children */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 1em;
+    background-color: gold;
+    padding: 8px 12px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.nav-link:hover {
+    background-color: gold;
+
+    /* text-decoration: underline; */
+}
+
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: gold;
+    margin-left: auto; /* Push to the right */
+    text-decoration: none;
+    font-weight: bold; /* Make the title bold */
+    font-size: 1.5rem; /* Increase the font size */
+    letter-spacing: 1px; /* Add some letter spacing for readability */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.title:hover {
+    color: #ff7643; /* Slightly lighter color on hover */
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* Button styles */
+#add-to-fav-btn {
+    border: none;
+    padding: 10px 15px;
+    background-color: gold;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid grey;
+    }
+
+    .chart-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+        padding: 10px;
+    }
+
+    .market-data {
+        padding: 10px;
+    }
+
+    .button-container button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
